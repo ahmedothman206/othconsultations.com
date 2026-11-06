@@ -107,10 +107,6 @@
 
             <!-- Actions -->
             <div class="hidden sm:flex items-center gap-2">
-                <button id="btn-deploy-guide" class="px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 hover:text-brand-600 flex items-center gap-1.5 transition-all shadow-xs">
-                    <i class="fa-brands fa-github text-xs"></i>
-                    <span>GitHub Pages Guide</span>
-                </button>
                 <a href="#contact" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white shadow-sm transition-all">
                     Get In Touch
                 </a>
@@ -134,10 +130,6 @@
             <a href="#certifications" class="mobile-nav-link block px-3 py-2 rounded-md text-xs font-medium text-slate-700 hover:bg-slate-100">Certifications</a>
             <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-xs font-medium text-slate-700 hover:bg-slate-100">Contact & Inquiries</a>
             <div class="pt-2 flex flex-col gap-2">
-                <button id="btn-deploy-guide-mobile" class="w-full py-2 px-3 rounded-lg text-xs font-mono font-semibold bg-slate-100 border border-slate-300 text-slate-700 flex items-center justify-center gap-1.5">
-                    <i class="fa-brands fa-github text-xs"></i>
-                    <span>GitHub Pages Deployment Guide</span>
-                </button>
                 <a href="#contact" class="mobile-nav-link w-full py-2 px-3 rounded-lg text-center text-xs font-semibold bg-brand-600 text-white">
                     Contact Ahmed
                 </a>
@@ -1439,65 +1431,6 @@
     </div>
 
     <!-- GitHub Pages Setup & Deployment Guide Modal -->
-    <div id="deploy-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-        <div class="relative w-full max-w-xl rounded-2xl bg-white border border-slate-200 p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
-            <div class="flex items-start justify-between">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-lg bg-slate-900 flex items-center justify-center text-white text-base">
-                        <i class="fa-brands fa-github"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-base font-bold text-slate-900">How to Host on GitHub Pages</h3>
-                        <p class="text-[11px] font-mono text-brand-600">Free, fast, and live at ahmedothman206.github.io</p>
-                    </div>
-                </div>
-                <button id="btn-close-deploy-modal" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors" aria-label="Close modal">
-                    <i class="fa-solid fa-xmark text-base"></i>
-                </button>
-            </div>
-
-            <div class="space-y-3 text-xs text-slate-700 leading-relaxed">
-                <p>
-                    You can host this entire portfolio for free using <strong>GitHub Pages</strong>. Anyone visiting your link will see this interactive site!
-                </p>
-
-                <div class="space-y-2.5 font-mono text-xs">
-                    <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
-                        <strong class="text-slate-900 block mb-0.5">Step 1: Create a GitHub Repository</strong>
-                        <p class="text-slate-600">Log in to <span class="text-brand-600 font-semibold">github.com</span> and create a new public repository named:</p>
-                        <code class="text-emerald-700 font-semibold block mt-1 bg-white px-2 py-1 rounded border border-slate-200">ahmedothman206.github.io</code>
-                    </div>
-
-                    <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
-                        <strong class="text-slate-900 block mb-0.5">Step 2: Add index.html</strong>
-                        <p class="text-slate-600">Upload or push this single <code class="text-cyan-700 font-semibold">index.html</code> file to the root of your repository.</p>
-                    </div>
-
-                    <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
-                        <strong class="text-slate-900 block mb-0.5">Step 3: Enable GitHub Pages</strong>
-                        <p class="text-slate-600">In your GitHub repository, go to <strong class="text-slate-800">Settings → Pages</strong>.</p>
-                        <p class="text-slate-600 mt-0.5">Under <strong class="text-slate-800">Build and deployment → Branch</strong>, choose <code class="text-brand-600">main</code> (or master) and folder <code class="text-brand-600">/ (root)</code>, then click <strong class="text-slate-800">Save</strong>.</p>
-                    </div>
-
-                    <div class="p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800">
-                        <strong class="block mb-0.5">Step 4: Your Live Link is Ready!</strong>
-                        <p>Within 60 seconds, your site is live at: <span class="text-slate-900 font-bold underline">https://ahmedothman206.github.io</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <button id="btn-copy-repo-command" class="px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 flex items-center gap-1.5 transition-colors">
-                    <i class="fa-regular fa-copy text-[11px]"></i>
-                    <span>Copy Git Commands</span>
-                </button>
-                <button id="btn-deploy-dismiss" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white transition-colors">
-                    Got It!
-                </button>
-            </div>
-        </div>
-    </div>
-
     <!-- Interactive Client Scripts & Dynamic Chart.js -->
     <script>
         // Datasets for the Dynamic Student Breakdown Analytics
@@ -1941,38 +1874,6 @@
             if (modal) {
                 modal.addEventListener('click', (e) => {
                     if (e.target === modal) closeModal();
-                });
-            }
-
-            // GitHub Deploy Guide Modal Logic
-            const deployModal = document.getElementById('deploy-modal');
-            const btnDeployGuide = document.getElementById('btn-deploy-guide');
-            const btnDeployGuideMobile = document.getElementById('btn-deploy-guide-mobile');
-            const btnCloseDeploy = document.getElementById('btn-close-deploy-modal');
-            const btnDeployDismiss = document.getElementById('btn-deploy-dismiss');
-            const btnCopyGitCmd = document.getElementById('btn-copy-repo-command');
-
-            function openDeployModal() {
-                if (deployModal) deployModal.classList.remove('hidden');
-            }
-            function closeDeployModal() {
-                if (deployModal) deployModal.classList.add('hidden');
-            }
-
-            if (btnDeployGuide) btnDeployGuide.addEventListener('click', openDeployModal);
-            if (btnDeployGuideMobile) btnDeployGuideMobile.addEventListener('click', openDeployModal);
-            if (btnCloseDeploy) btnCloseDeploy.addEventListener('click', closeDeployModal);
-            if (btnDeployDismiss) btnDeployDismiss.addEventListener('click', closeDeployModal);
-            if (deployModal) {
-                deployModal.addEventListener('click', (e) => {
-                    if (e.target === deployModal) closeDeployModal();
-                });
-            }
-
-            if (btnCopyGitCmd) {
-                btnCopyGitCmd.addEventListener('click', () => {
-                    const commands = `git init\ngit add index.html README.md\ngit commit -m "feat: initial portfolio release"\ngit branch -M main\ngit remote add origin https://github.com/ahmedothman206/ahmedothman206.github.io.git\ngit push -u origin main`;
-                    copyToClipboard(commands, 'Git deployment commands copied to clipboard!');
                 });
             }
 
